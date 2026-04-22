@@ -77,6 +77,8 @@ venv.bak/
 .ropeproject
 
 # Local data
+
+ml-latest-small/
 *.sqlite3
 *.db
 

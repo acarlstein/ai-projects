@@ -1,4 +1,4 @@
-# Let's Learn AI Together!
+# Let's Learn AI Together
 
 Welcome to the code repository for **Let's Learn AI Together!** — a hands-on tutorial (and possible book) designed to teach AI and machine learning concepts step by step.
 
@@ -19,20 +19,37 @@ cd ai-projects
 
 We recommend using a virtual environment to keep dependencies isolated.
 
-#### Using the provided script:
+#### Using the provided script
 
-```bash
-bash scripts/env.sh
-```
+- On **Linux/macOS**:
+
+ ```bash
+ bash scripts/env.sh
+ ```
+
+- On **Windows**:
+
+ ```cmd
+ scripts\env_win.bat
+ ```
 
 This will create and activate a virtual environment in the `venv/` folder.
 
-#### Or manually:
+#### Or manually
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
+- On **Linux/macOS**:
+
+ ```bash
+ python3 -m venv venv
+ source venv/bin/activate
+ ```
+
+- On **Windows**:
+
+ ```cmd
+ python -m venv venv
+ venv\Scripts\activate.bat
+ ```
 
 ### 3. Install Dependencies
 
@@ -54,9 +71,34 @@ You should see output indicating data loading, feature extraction, training, and
 
 ## Data
 
-The `ml-latest-small/` folder contains the [MovieLens](https://grouplens.org/datasets/movielens/) dataset, downloaded from:
+The dataset used in this project is the [MovieLens](https://grouplens.org/datasets/movielens/) ml-latest-small dataset.
 
-https://files.grouplens.org/datasets/movielens/ml-latest-small.zip
+**To download the dataset:**
+
+- On **Linux/macOS**:
+
+ ```bash
+ bash scripts/download_movielens.sh
+ ```
+
+ This script will check for required tools (wget, unzip) and prompt to install them using your system's package manager:
+
+- On Linux (Debian/Ubuntu): uses `apt-get`
+- On macOS: uses `brew` (Homebrew)
+
+ Add `-y` to auto-confirm package installs:
+
+ ```bash
+ bash scripts/download_movielens.sh -y
+ ```
+
+- On **Windows**:
+
+ ```cmd
+ scripts\download_movielens_win.bat
+ ```
+
+This will automatically download and extract the data into the `ml-latest-small/` folder.
 
 See `ml-latest-small/README.txt` for details and license.
 
