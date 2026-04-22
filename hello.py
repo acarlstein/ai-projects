@@ -1,0 +1,1 @@
+print("Hey, everybody! Let's learn AI together!")
